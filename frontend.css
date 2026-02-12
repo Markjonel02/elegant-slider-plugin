@@ -1,0 +1,76 @@
+
+.esp-slider-root {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: var(--esp-radius);
+}
+
+.esp-slider-wrapper {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.esp-slide {
+    flex: 0 0 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--esp-radius);
+}
+
+.esp-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Nav Clickable Areas */
+.esp-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s;
+}
+
+.esp-nav-btn:hover { background: var(--esp-accent); box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
+.esp-nav-btn.prev { left: 15px; }
+.esp-nav-btn.next { right: 15px; }
+
+.esp-dots-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    z-index: 10;
+}
+
+/* ELEGANT SMALL DOTS */
+.esp-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    transition: all 0.3s;
+}
+
+.esp-dot.active {
+    background: var(--esp-accent);
+    width: 18px;
+    border-radius: 10px;
+}
